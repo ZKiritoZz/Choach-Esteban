@@ -1,3 +1,31 @@
+    // ********** Header **********//
+
+document.addEventListener("DOMContentLoaded", () => {
+    const boton = document.querySelector(".menu-hamburguesa");
+    const menu = document.querySelector("header nav");
+
+    if (!boton || !menu) return;
+
+    boton.addEventListener("click", () => {
+        const abierto = menu.classList.toggle("active");
+
+        boton.setAttribute("aria-expanded", abierto);
+        boton.setAttribute("aria-label", abierto ? "Cerrar menú" : "Abrir menú");
+
+        boton.innerHTML = abierto
+            ? '<i class="fa-solid fa-xmark"></i>'
+            : '<i class="fa-solid fa-bars"></i>';
+    });
+
+    menu.querySelectorAll("a").forEach(enlace => {
+        enlace.addEventListener("click", () => {
+            menu.classList.remove("active");
+            boton.setAttribute("aria-expanded", "false");
+            boton.setAttribute("aria-label", "Abrir menú");
+            boton.innerHTML = '<i class="fa-solid fa-bars"></i>';
+        });
+    });
+});
 
 document.addEventListener("DOMContentLoaded", () => {
 

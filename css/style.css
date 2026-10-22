@@ -146,6 +146,22 @@ nav ul {
     box-shadow: 0 0 20px rgba(195, 175, 159, 0.8);
 }
 
+.menu-hamburguesa {
+    display: none;
+    background: transparent;
+    color: #c3af9f;
+    border: 1px solid #c3af9f;
+    border-radius: 6px;
+    padding: 8px 11px;
+    font-size: 24px;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.menu-hamburguesa:hover {
+    background-color: #232729;
+}
+
 /********** Footer **********/
 
 .footer {
@@ -548,15 +564,16 @@ nav ul {
     flex: 1;
     min-width: 0;
     padding: 25px 20px;
-    background-color: #fff;
+    background-color: #232d31;
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    border: solid 3px #9c8955;
 }
 
 .historia p {
     font-size: clamp(0.95rem, 2vw, 1.1rem);
     line-height: 1.7;
-    color: #444;
+    color: #d9dada;
     font-style: italic;
     overflow-wrap: anywhere;
 }
@@ -615,6 +632,12 @@ nav ul {
 
 .historias-carrusel button:hover {
     color: #086b9c;
+}
+
+.fa-quote-left {
+    font-size: 35px;
+    color: #B39B35;
+    margin-bottom: 20px;
 }
 
 /********** Sobre mí **********/
@@ -767,6 +790,46 @@ nav ul {
     padding: 20px;
     border-radius: 12px;
     overflow-wrap: anywhere;
+}
+
+.sobre-mi-Case-Maps {
+    min-height: 500px;
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.sobre-mi-Case-Maps-titlle {
+    color: #d9dada;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.sobre-mi-Case-Maps iframe {
+    width: 100%;
+    max-width: 1000px;
+    height: 500px;
+    border: 0;
+    border-radius: 8px;
+}
+
+.sobre-mi-Case-Maps{
+    height: 500px;
+    width: 100%;
+    background-color: transparent;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.sobre-mi-Case-Maps-titlle{
+    color: #d9dada;
+    font-size: 3rem;
 }
 
 /********** Nuestros Planes (NP) **********/
@@ -1161,6 +1224,19 @@ nav ul {
         padding: 15px;
     }
 
+    .sobre-mi-Case-Maps {
+        margin-top: 25px;
+        padding: 0 10px;
+    }
+
+    .sobre-mi-Case-Maps-titlle {
+        font-size: 1.8rem;
+    }
+
+    .sobre-mi-Case-Maps iframe {
+        height: 300px;
+    }
+
     .NP-Case {
         padding: 30px 10px;
     }
@@ -1199,5 +1275,104 @@ nav ul {
 
     .copyright {
         font-size: 11px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        min-height: 75px;
+        height: auto;
+        padding: 10px 18px;
+        gap: 10px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .Logo {
+        width: 65px;
+        max-height: 60px;
+    }
+
+    .menu-hamburguesa {
+        display: block;
+        margin-left: auto;
+    }
+
+    header nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 250px;
+        max-width: 85vw;
+        min-width: 0;
+        padding: 12px;
+        box-sizing: border-box;
+        background-color: #393d42;
+        border: 1px solid #c3af9f;
+        border-top: none;
+        border-radius: 0 0 8px 8px;
+        box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3);
+    }
+
+    header nav.active {
+        display: block;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+        width: 100%;
+    }
+
+    header nav ul li {
+        width: 100%;
+    }
+
+    .Link_header {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 12px;
+        text-align: left;
+    }
+
+    header nav ul li:last-child a {
+        display: block;
+    }
+
+    .link_Whatssap {
+        width: 100%;
+        padding: 12px;
+    }
+
+    header:hover {
+        transform: none;
+    }
+
+    .sobre-mi-Case-Maps {
+        min-height: auto;
+        margin-top: 35px;
+        padding: 0 15px;
+    }
+
+    .sobre-mi-Case-Maps-titlle {
+        font-size: 2.2rem;
+    }
+
+    .sobre-mi-Case-Maps iframe {
+        height: 400px;
+    }
+}
+
+@media (min-width: 769px) {
+    .menu-hamburguesa {
+        display: none;
+    }
+
+    header nav {
+        display: block;
     }
 }
