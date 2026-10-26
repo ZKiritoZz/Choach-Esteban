@@ -924,6 +924,152 @@ nav ul {
     filter: drop-shadow(0 4px 10px rgba(72, 239, 128, 0.4));
 }
 
+/********** Membresia.html **********/
+
+.membresia-Case{
+    padding: 120px 20px 40px;
+    min-height: auto;
+    height: auto;
+    background-size: cover;
+    background-color: transparent;
+    margin-top: 20px;
+    justify-content: center;
+    width: 100%;
+}
+
+.membresia-Case h2{
+    font-size: clamp(2rem, 5vw, 4rem);
+    text-align: center;
+    color: #d9dada;
+    overflow-wrap: break-word;
+    padding: 0 10px;
+}
+
+.membresia-Case-plans{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    gap: 50px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.membresia-Case-plans-info {
+    background: linear-gradient(145deg, rgba(35, 45, 55, 0.9), rgba(25, 32, 40, 0.95));
+    width: 100%;
+    max-width: 350px;
+    max-width: 100%;
+    flex: 1 1 280px;
+    padding: 30px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-radius: 16px;
+    border: 1px solid 
+    rgba(255, 255, 255, 0.08);
+    margin: 20px 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    cursor: pointer;
+}
+
+.membresia-Case-plans-info:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(12, 136, 198, 0.25);
+    border-color: rgba(12, 136, 198, 0.5);
+}
+
+.membresia-Case-plans-info h2 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.membresia-Case-plans-info span {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.membresia-Case-plans-info .Time {
+    font-size: 1rem;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.membresia-Case-plans-info .Data-plans {
+    font-size: 0.95rem;
+    color: #cbd5e1;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+.membresia-Case-plans-info h3 {
+    font-size: 1rem;
+    color: #fff;
+    text-align: left;
+    width: 100%;
+    margin-bottom: 12px;
+    font-weight: 600;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 8px;
+}
+
+.membresia-Case-plans-info ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 25px 0;
+    width: 100%;
+    text-align: left;
+    flex-grow: 1;
+}
+
+.membresia-Case-plans-info li {
+    font-size: 0.9rem;
+    color: #cbd5e1;
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+
+.membresia-Case-plans-info li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #0cc6c6;
+    font-weight: bold;
+}
+
+.membresia-Case-plans-info a{
+    width: 100%;
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    padding: 14px 20px;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.3s ease, opacity 0.2s ease;
+    margin-top: auto;
+    box-shadow: 0 4px 15px rgba(12, 136, 198, 0.4);
+    letter-spacing: 0.5px;
+    text-decoration: none;
+}
+
+.membresia-Case-plans-info a:hover {
+    background-color: #0cc6c6;
+    color: #0f172a; /* Color oscuro para contraste al pasar el mouse */
+    box-shadow: 0 4px 15px rgba(12, 198, 198, 0.4);
+    transform: translateY(-2px);
+}
+
 /********** Responsible design **********/
 
 @media (min-width: 1400px) {
@@ -1374,5 +1520,42 @@ nav ul {
 
     header nav {
         display: block;
+    }
+}
+
+@media (max-width: 960px) {
+    .membresia-Case {
+        padding: 60px 10px 30px;
+    }
+    
+    .membresia-Case-plans {
+        gap: 20px;
+    }
+
+    .membresia-Case-plans-info {
+        max-width: 450px;
+    }
+}
+
+@media (max-width: 600px) {
+    .membresia-Case {
+        padding: 40px 10px 20px;
+    }
+
+    .membresia-Case-plans {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        margin-top: 10px;
+    }
+
+    .membresia-Case-plans-info {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .membresia-Case h2 {
+        font-size: 1.8rem;
     }
 }
